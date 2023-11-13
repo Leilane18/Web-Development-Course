@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: space-around;*/
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.square {
+    height: 80px;
+    width: 80px;
+    color: white;
+    margin: 12px;
+}
+
+.square:nth-child(1) {
+    background: green;
+    order: 1;
+}
+
+.square:nth-child(2) {
+    background: rgb(48, 77, 48);
+    order: 3;
+}
+
+.square:nth-child(3) {
+    background: rgb(139, 221, 139);
+    order: 5;
+}
+
+.square:nth-child(4) {
+    background: rgb(24, 61, 24);
+    order: 2;
+}
+
+.square:nth-child(5) {
+    background: rgb(1, 32, 1);
+    order: 4;
+}
+
+.square:nth-child(6) {
+    background: rgb(58, 158, 58);
+    order: 6;
+}

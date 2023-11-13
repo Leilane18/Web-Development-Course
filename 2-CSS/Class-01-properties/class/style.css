@@ -1,0 +1,44 @@
+body{
+    background: lightgray;
+    background: url(../../../1-HTML/class-03-medias/challenges/images/img-2.jpg);
+    background-repeat: no-repeat;
+    background-size: 240px;
+    background-position: center;
+    background-attachment: fixed;
+    
+
+}
+
+
+h1 {
+    color: green;
+    background: honeydew;
+    border: 2px solid olive;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+h2 {
+    color: brown;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px black;
+}
+  
+#subTitle2 {
+    color: green
+}
+
+p.paragraph {
+    color: rgb(76, 122, 76);
+    font-weight: 600;
+    font-size: 29px;
+    font-style: italic;
+    word-spacing: 4px;
+    line-height: 32px;
+    text-transform: capitalize;
+    text-decoration: line-through black;
+}
+
+
+
