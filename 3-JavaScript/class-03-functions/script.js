@@ -1,33 +1,37 @@
+printText("A Usurpadora"); // arguments
 // Named
 
 // parameters
-function printText(text ) {
-    console.log(text);
+
+sumNumbers("Maria do Bairro"); // arguments
+sumNumbers("Rebelde"); // arguments
+sumNumbers(123); // arguments
+
+function sumNumbers(num1 = 0, num2 = 1) {
+  const sum = num1 + num2; // key operator
+  return sum;
 }
 
-printText("A Usurpadora"); // arguments
-printText("Maria do Bairro"); // arguments
-printText("Rebelde"); // arguments
+console.log(sumNumbers(20, 3));
 
-function sumNumbers(num1 =0, num2 = 1) {
-    const sum = num1 + num2; // key operator
-    return sum;
-}
-
-console.log(sumNumbers (20, 3));
-
- const result = sumNumbers(2, 30);
- console.log(result);
+const result = sumNumbers(2, 3);
+console.log(result);
 
 sumNumbers(200, 500);
 
-// anonymous
+// Anonymous
 
- const sum = function (num1, num2) {
-    return num1 + num2
-}
+const sum = function (num1, num2) {
+  return num1 + num2;
+};
 
-// arrow * 
+sum();
+
+// arrow *
 
 const sumNum1Num2 = (num1, num2) => num1 + num2;
- console.log(sumNum1Num2(5, 7));
+console.log(sumNum1Num2(2, 3));
+
+function printText(text) {
+  console.log(text);
+}
