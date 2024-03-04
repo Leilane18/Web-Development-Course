@@ -10,8 +10,8 @@ export function App() {
       <ButtonApp name="<<" />
       <ButtonApp name=">>" />
 
-      <UserCard name="Jeanderson" role="Web Developer" color="lightblue" />
-      <UserCard name="Gilsara" role="Web Developer" color="lightpink" />
+      <UserCard name="Leilane" role="Web Developer" color="lightblue" />
+      <UserCard name="Sophya" role="Web Developer" color="lightpink" />
     </>
   );
 }
