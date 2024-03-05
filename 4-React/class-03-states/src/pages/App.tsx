@@ -6,13 +6,16 @@ export function App() {
     
 
     function add() {
-        setCount( (count) => count + 1);
+        setCount((count) => count + 1);
         setName("Leilane");
     }
 
     function rem() {
         setCount((count) => count - 1);
     }
+
+    console.log(count);
+    
     return (
         <>
         <h1>Class States</h1>
