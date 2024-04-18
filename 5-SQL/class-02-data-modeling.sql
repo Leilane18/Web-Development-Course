@@ -19,7 +19,13 @@ INSERT INTO students (name, id_course) VALUES
 ('Shikamaru', 1),
 ('Lee', 2);
 
+SELECT * FROM courses;
 INSERT INTO courses (name, workload) VALUES
 ('Controle do Chakra', '40h'),
 ('Jutsu clone das sombras', '160h'),
 ('Jutsu de invocação', '240h');
+
+
+SELECT students.name, courses.name
+FROM students FULL JOIN courses
+ON students.id_course = courses.id;
