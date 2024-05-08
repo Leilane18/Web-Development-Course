@@ -1,5 +1,6 @@
-import { NextFunction, Response, Request } from "express";
+import { Request, NextFunction, Response } from "express";
 import { userServices } from "../services/userServices";
+import { z } from "zod";
 
 export const userControllers = {
   read(req: Request, res: Response, next: NextFunction) {
@@ -10,13 +11,19 @@ export const userControllers = {
     }
   },
 
-  create(req: Request, res: Response, next: NextFunction) {
+  async create(req: Request, res: Response, next: NextFunction) {
     try {
-      const { name, age } = req.body;
+      const userSchema = z.object({
+        name: z.string().max(255),
+        email: z.string().email().max(255),
+        password: z.string().min(7, "Mínimo de 7 caracteres").max(255),
+      });
 
-     const user = userServices.create({ name, age });
+      const { name, email, password } = userSchema.parse(req.body);
 
-      return res.status(201).json({ message: "User creatred!", user });
+      const user = await userServices.create({ name, email, password });
+
+      return res.status(201).json({ message: "User created!", user });
     } catch (error) {
       return next(error);
     }
