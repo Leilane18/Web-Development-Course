@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { hash } from "bcrypt";
+import { userRepository } from "../repositories/userRepository";
 
 type UserData = {
   name: string;
@@ -21,11 +22,20 @@ export const userServices = {
         password: passwordHash,
       };
 
-      console.log(user); // database
+      const userCreated = await userRepository.create(user);
 
-      return { id: user.id };
+      return userCreated;
     } catch (error) {
       return console.error(error);
+    }
+  },
+
+  async read(id: string) {
+    try {
+      const user = await userRepository.read(id);
+      return user;
+    } catch (error) {
+      console.error(error);
     }
   },
 };
